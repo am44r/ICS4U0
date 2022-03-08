@@ -1,7 +1,7 @@
 /*
 Given a array of numbers, and a single number n, return an 
 extracted array of unique numbers that are 
-evenly divisible by n recursivley. Your extracted array should be 
+evenly divisible by n. Your extracted array should be 
 sorted in ascending numerical order.
 */
 
