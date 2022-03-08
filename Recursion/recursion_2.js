@@ -12,3 +12,6 @@ function extractEvenlyDivisible(numbers, n) {
 }
 
 console.log(extractEvenlyDivisible([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+// let arr = [1, 2, 3];
+// arr = arr.slice(1);
+// console.log(arr);
