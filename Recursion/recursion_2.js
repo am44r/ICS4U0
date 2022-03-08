@@ -11,7 +11,17 @@ function extractEvenlyDivisible(numbers, n) {
   return [numbers[0]].concat(extractEvenlyDivisible(numbers.slice(1), n));
 }
 
-console.log(extractEvenlyDivisible([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+final_array = [...new Set(extractEvenlyDivisible([1,9,3,4,3,6,7,8,9], 3).sort())];
+console.log(final_array);
+
+
+
+
+// Testing the slice() function
 // let arr = [1, 2, 3];
 // arr = arr.slice(1);
 // console.log(arr);
+
+// Learning spread syntax + set to sort array and remove repeated values.
+// let arr = [3, 1, 3, 2, 3, 4];
+// mod_arr = [...new Set(arr)];
