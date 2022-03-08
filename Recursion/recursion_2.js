@@ -6,7 +6,7 @@ sorted in ascending numerical order.
 */
 
 const extractEvenlyDivisible = (numbers, n) => {
-  if (numbers.length === 0) return [];
+  if (numbers.length === 0 || n === 0) return [];
   if (numbers[0] % n !== 0) return extractEvenlyDivisible(numbers.slice(1), n);
   return [numbers[0]].concat(extractEvenlyDivisible(numbers.slice(1), n));
 }

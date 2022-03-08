@@ -14,3 +14,19 @@ Examples:
 If you ran iterativeCalculate("dob") you would get a return value of 2 ("dob" and "o" are both mirrordromes).
 If you ran recursiveCalculate("totally") you would get a return value of 7 ("t", "t", "o", "l", "l", "ll", and "tot" are all mirrordromes)
 */
+
+const singleLetterMirrors = ['i', 'l', 'm', 'n', 'o', 't', 'u', 'v', 'w', 'x'];
+const mirrorOpposites = ['b', 'p', 's', 'q', 'd', 'z'];
+
+const splitArray =  arr => {
+  return arr.split('');
+}
+
+const checkMirror = (string, single = singleLetterMirrors, mirror = mirrorOpposites) => {
+  const singleLetterMirrors = ['l', 'm', 'n', 'o', 't', 'u', 'v', 'w', 'x'];
+  const mirrorOpposites = ['b', 'p', 's', 'q', 'd', 'z'];
+  string = splitArray(string);
+  if (string.length === 0) return `no mirrors in ${string.join('')}`;
+  if (string.includes(singleLetterMirrors[0])) return checkMirror(string.slice(1), single.slice(1));
+}
+ console.log(checkMirror('Random'));
