@@ -14,13 +14,3 @@ Examples:
 If you ran iterativeCalculate("dob") you would get a return value of 2 ("dob" and "o" are both mirrordromes).
 If you ran recursiveCalculate("totally") you would get a return value of 7 ("t", "t", "o", "l", "l", "ll", and "tot" are all mirrordromes)
 */
-
-function iterativeCalculate(string) {
-  var count = 0;
-  for (var i = 0; i < string.length; i++) {
-    if (isMirror(string[i])) {
-      count++;
-    }
-  }
-  return count;
-}
