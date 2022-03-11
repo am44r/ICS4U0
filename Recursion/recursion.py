@@ -1,13 +1,22 @@
-def extractEvenlyDivisible(array, divisor):
-    def helper(arr, index):
-        if(len(arr) == index + 1):
-            return arr
-        elif ((arr[index] % divisor) == 0):
-            return helper(arr, index + 1)
-        else:
-            arr.pop(index)
-            return helper(arr, index)
-    return sorted(set(helper(array, 0)))
+def doubleCountdown(n, count = 0):
+    # Base case - checks if (n) = counter
+    # If true returns 0
+    if n == count:
+        return 0
+    # If base case not true log(n - counter) to terminal
+    print(n - count)
+    # Call the function recursively, passing (n) and incremented counter
+    doubleCountdown(n, count+1)
+    print(count)
+    return 0
 
+# Test cases
+doubleCountdown(5)
+doubleCountdown(6)
+doubleCountdown(3)
 
-print(extractEvenlyDivisible([1,9,3,4,3,6,7,8,9], 3))
+# Test cases for you to create
+# doubleCountdown(n)
+# doubleCountdown(n)
+# doubleCountdown(n)
+

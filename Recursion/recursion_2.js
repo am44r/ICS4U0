@@ -18,18 +18,19 @@
 const extractEvenlyDivisible = (numbers, n) => {
   // Base case (checks if the array is empty or (n) = 0 becuase nothing is divisble by 0)
   if (numbers.length === 0 || n === 0) return [];
-  // Checks if the first index of the array is not divisible by (n). If it isn't, we slice of that index and return the function
+  // Checks if the first index of the array is NOT divisible by (n). If it isn't, we slice off that index and return the function
   if (numbers[0] % n !== 0) return extractEvenlyDivisible(numbers.slice(1), n);
   return [
     // Creates a collection where a value may only appear once
     ...new Set(
       [numbers[0]]
-        // Conactinating two arrays together (Divisible Value + the left over array)
+        // Conactinating two arrays together (Divisible Value + the left over array after slicing off the first value)
         .concat(extractEvenlyDivisible(numbers.slice(1), n))
         // Compare function using .sort() method
         // Compares two values in the array (a, b)
-        // If result is negative (a) is sorted before (b) - a<b
+        // If result is negative, (a) is sorted before (b) - a<b
         .sort((a, b) => {
+          // Returns the result (neg) or (pos)
           return a - b;
         })
     ),

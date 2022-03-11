@@ -15,7 +15,7 @@
 
 // Using counter default parameter
 const doubleCountdown = (n, counter = 0) => {
-  // Base case; checks if (n) = counter
+  // Base case - checks if (n) = counter
   // If true returns 0
   if (n === counter) return 0;
   // If base case not true log (n - counter) to console
@@ -23,7 +23,7 @@ const doubleCountdown = (n, counter = 0) => {
   // Call the function recursively, passing (n) and incremented counter
   doubleCountdown(n, counter + 1);
   console.log(counter);
-  return 1;
+  return 0;
 };
 
 // Test Cases
