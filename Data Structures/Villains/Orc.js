@@ -7,14 +7,14 @@ class Orc extends Villain {
 
     meatEat(hp, lives) {
         if (hp > 0 && lives > 0) {
-            console.alert('Eating Meat');
+            alert('Eating Meat');
             this.hp += 2;
         }
     }
 
     clubSwing() {
         if (lives >= 1) {
-            console.alert('Orc swinged his club at your head!');
+            alert('Orc swinged his club at your head!');
         }
     }
 

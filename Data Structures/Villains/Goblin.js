@@ -6,6 +6,6 @@ class Goblin extends Villain {
     }
 
     screamAttack() {
-        console.alert('Screamed!');
+        alert('Screamed!');
     }
 }

@@ -1,6 +1,6 @@
 // This is the generic player class
 
-module.export = class Hero {
+module.exports = class Hero {
     constructor(type) {
         this.type = type;
         this._level = 1;
@@ -12,11 +12,11 @@ module.export = class Hero {
         return this._lives;
     }
 
-    setLives(_lives) {
-        if (_lives >= 0) {
+    setLives(lives) {
+        if (lives >= 0) {
             this._lives = 0;
         }else{
-            console.alert('Sorry, no negative life!');
+            alert('Sorry, no negative life!');
             this._lives = 0;
         }
     }

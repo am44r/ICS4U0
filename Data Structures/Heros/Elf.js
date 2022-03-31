@@ -5,7 +5,15 @@ class Elf extends Hero {
 
     shootArrow() {
         if (lives > 0) {
-            console.log('Elf shot an arrow!');
+            alert('Elf shot an arrow!');
+        }
+    }
+
+    usePotion(hp) {
+        if (hp > 0) {
+            this.hp++;
+        }else{
+            alert('You are dead!');
         }
     }
 }
