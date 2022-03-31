@@ -1,0 +1,35 @@
+.buttons {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400px;
+}
+
+.hero-attack {
+    background-color: red;
+    color: white;
+    text-align: center;
+    opacity: 0.5;
+    transition: 0.5;
+    font-size: 20px;
+}
+
+.hero-attack:hover {opacity: 1}
+
+.hero-dodge {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    opacity: 0.5;
+    transition: 0.5;
+    font-size: 20px;
+}
+
+.hero-dodge:hover {opacity: 1}
+
+.divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
