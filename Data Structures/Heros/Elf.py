@@ -12,4 +12,5 @@ class Elf(Hero):
 
     def shootSpecial(self):
         if self._specialCharges > 0 and self._hp > 2:
-            return 'Elf used a special attack!'
+            self._specialCharges -= 1
+            return 'Elf used Belthronding and shot Dailir at the enemy!'

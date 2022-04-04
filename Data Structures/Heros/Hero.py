@@ -8,3 +8,6 @@ class Hero(object):
 
     def getHeroLives(self):
         return f"Your hero has {self._lives} lives to start with."
+
+    def sharpenWeapon(self):
+        return f"{self._heroType} sharpened weapon and increased DP by 1!"
