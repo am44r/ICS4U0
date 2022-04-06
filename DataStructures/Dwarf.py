@@ -1,4 +1,4 @@
-from Hero import Hero
+import Hero
 
 
 class Dwarf(Hero):

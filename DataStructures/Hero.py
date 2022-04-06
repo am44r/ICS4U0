@@ -1,4 +1,4 @@
-class Hero(object):
+class Hero():
     def __init__(self, heroType, lives):
         self._heroType = heroType
         self._lives = lives

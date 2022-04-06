@@ -1,4 +1,4 @@
-class Villain(object):
+class Villain():
     def __init__(self, villainType, lives):
         self._villainType = villainType
         self._lives = lives

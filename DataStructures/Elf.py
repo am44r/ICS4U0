@@ -1,4 +1,4 @@
-from Heros import Hero
+import Hero
 
 
 class Elf(Hero):
