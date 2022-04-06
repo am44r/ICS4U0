@@ -1,4 +1,4 @@
-import Villain
+from villain import Villain
 
 
 class Goblin(Villain):

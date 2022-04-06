@@ -1,10 +1,9 @@
-import Hero
-# from Heros import Elf
-# from Heros import Dwarf
+# Imports for villain class and children
+from villain import Villain
+from orc import Orc
+from goblin import Goblin
 
-import Villain
-import Orc
-# from Villains import Goblin
-
-orc1 = Orc(5, 1)
-print(orc1)
+# Imports for hero class and children
+from hero import Hero
+from elf import Elf
+from dwarf import Dwarf

@@ -3,9 +3,9 @@ from villain import Villain
 
 class Orc(Villain):
     def __init__(self, hp, specialCharges):
+        super().__init__(villainType="Orc", lives=2)
         self._hp = hp
         self._specialCharges = specialCharges
-        super().__init__(villainType="Orc", lives=2)
 
     def hammerSlash(self):
         return "Orc attempted to slash you!"

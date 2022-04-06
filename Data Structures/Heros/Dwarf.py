@@ -16,5 +16,4 @@ class Dwarf(Hero):
 
     def useSpecial(self):
         if self._specialCharges > 0 and self._hp > 2:
-            self._specialCharges -= 1
             return "Your hero used Orcrist to slash the enemy!"
