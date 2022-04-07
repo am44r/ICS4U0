@@ -7,7 +7,10 @@ class Hero():
         return f"Your hero is of type {self._heroType}."
 
     def getHeroLives(self):
-        return f"Your hero has {self._lives} lives to start with."
+        return f"Your hero has {self._lives} lives."
 
     def sharpenWeapon(self):
         return f"{self._heroType} sharpened weapon and increased DP by 1!"
+
+    def dodge(self):
+        return "You dodged the enemies attack!!"
