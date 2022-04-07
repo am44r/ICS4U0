@@ -18,3 +18,6 @@ class Dwarf(Hero):
         if self._specialCharges > 0 and self._hp > 2:
             self._specialCharges -= 1
             return "Your hero used Orcrist to slash the enemy!"
+
+    def dodgeAttack(self):
+        return "You dodged the enemies attack!!"
