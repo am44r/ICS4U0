@@ -8,6 +8,3 @@ class Villain():
 
     def getVillainLives(self):
         print(f"Your enemy has {self._lives} live(s).")
-
-    def waveDash(self):
-        return f"{self._villainType} dodged your hero's attack!"

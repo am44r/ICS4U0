@@ -10,10 +10,6 @@ class Orc(Villain):
     def hammerSlash(self):
         return "Orc attempted to slash you!"
 
-    def eatMeat(self):
-        if self._hp > 0:
-            return "Orc ate your flesh. Regained 1hp!"
-
     def specialSlash(self):
         if self._specialCharges > 0 and self._hp > 2:
             return "Orc used a special slash on your hero!"
