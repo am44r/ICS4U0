@@ -153,8 +153,8 @@ else:
     player = Elf(4, 2)
     # Manually writing data to the JSON file
     heroData["heroType"] = "Elf"
-    heroData["heroLives"] = 3
-    heroData["heroSpecials"] = 2
+    heroData["heroLives"] = str(3)
+    heroData["heroSpecials"] = str(2)
     # Using the write to JSON function to write the info to JSON
     writeToJSON(path, heroSaved, heroData)
 
@@ -169,8 +169,8 @@ else:
     player = Dwarf(5, 1)
     # Manually writing data to the JSON file
     heroData["heroType"] = "Dwarf"
-    heroData["heroLives"] = 3
-    heroData["heroSpecials"] = 2
+    heroData["heroLives"] = str(2)
+    heroData["heroSpecials"] = str(2)
     # Using the write to JSON function to write the info to JSON
     writeToJSON(path, heroSaved, heroData)
 
@@ -186,8 +186,8 @@ else:
     enemyOne = Goblin(2, 1)
     # Manually writing data to the JSON file
     enemyData["villainType"] = "Goblin"
-    enemyData["enemyLives"] = 2
-    enemyData["enemySpecials"] = 1
+    enemyData["enemyLives"] = str(2)
+    enemyData["enemySpecials"] = str(1)
     # Using the write to JSON function to write the info to JSON
     writeToJSON(path, villainSaved, enemyData)
 
@@ -201,8 +201,8 @@ else:
     enemyOne = Orc(3, 2)
     # Manually writing data to the JSON file
     enemyData["villainType"] = "Orc"
-    enemyData["enemyLives"] = 3
-    enemyData["enemySpecials"] = 2
+    enemyData["enemyLives"] = str(3)
+    enemyData["enemySpecials"] = str(2)
     # Using the write to JSON function to write the info to JSON
     writeToJSON(path, villainSaved, enemyData)
 
