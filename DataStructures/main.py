@@ -140,7 +140,8 @@ while userHeroChoice is None:
     except ValueError:
         print("Please choose a number (1) or (2).")
 
-isLoadSavedData = input("Would you like to load saved data (y/n)?: ")
+isLoadSavedData = input(
+    "Would you like to load saved data (y/n) ('n' if first time play)?: ")
 
 if userChoice == 1 and isLoadSavedData == "y":
     # Assigning a variable to hold all loaded JSON info
