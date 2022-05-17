@@ -1,11 +1,10 @@
 class Student:
-    def __init__(self, fight_rank, grade):
-        self.fight_rank = fight_rank
+    def __init__(self, name, grade):
+        self.name = name
         self.grade = grade
 
-    def buyRank(self):
-        self.fight_rank += 1
-        return self.fight_rank
+    def displayName(self):
+        return self.name
 
     def increaseGrade(self):
         self.grade += 1
