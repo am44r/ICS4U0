@@ -1,5 +1,8 @@
 from student import Student
 from insertionSort import insertionSort
+from binarySearch import binary_search
+from linearSearch import linearSearch
+
 from names import student_names
 
 import random, time
@@ -7,9 +10,9 @@ import random, time
 for i in range(10):
     start_time = time.time()
 
-    # Code for 75000 objects
+    # Code for objects generation
     arr = []
-    for i in range(0, 75000):
+    for i in range(0, 5):
         random_name_value = random.randint(0, len(student_names) - 1)
         new_object = Student(
             student_names[random_name_value], random.randint(1, 100))
@@ -46,10 +49,25 @@ for i in range(10):
 
     # print('______________________________________________________________')
 
-    # Sorting the array by grade
+    # Searching the array using linear search (before sorting)
+    search_for = 50
+
+    time_start_linear = time.time()
+
+    unsorted_arr_linear = linearSearch(arr, search_for)
+
+    print(str((time.time() - time_start_linear)*1000))
+
+    if unsorted_arr_linear == -1:
+        print("\nLinear search: No student found with grade: {}".format(search_for))
+    else:
+        print("\nLinear search: Student found with grade: {}".format(
+            search_for) + " at index: {}".format(unsorted_arr_linear))
+
+    # Sorting the array by grade using insersion sort
     insertionSort(arr)
 
-    # Print first 20 objects in the sorted array
+    # #Print first 20 objects in the sorted array
     # print("\nAfter sorting (10):")
 
     # if len(arr) > 20:
@@ -76,6 +94,40 @@ for i in range(10):
 
     # print('______________________________________________________________')
 
-    time_taken_milliseconds = (time.time() - start_time)*1000
 
-    print("\n--- %s milliseconds ---" % (str((time_taken_milliseconds))))
+    
+
+    
+    
+    # Sorting the array using binary search
+    search_for = 50
+    arr.sort(key=lambda x: x.grade)
+
+    time_start_binary = time.time()
+
+    sorted_arr_binary = binary_search(arr, 0, len(arr) - 1, search_for)
+
+    print(str((time.time() - time_start_binary)*1000))
+
+    if sorted_arr_binary != -1:
+        print("Element at index", str(sorted_arr_binary))
+    else:
+        print("Element not in array")
+
+    # Searching the arry using linear search (post-sorting)
+    search_for = 50
+    time_start_linear_sorted = time.time()
+    sorted_arr_linear = linearSearch(arr, search_for)
+    print(str((time.time() - time_start_linear_sorted)*1000))
+   
+    if sorted_arr_linear == -1:
+        print("\nLinear search: No student found with grade: {}".format(search_for))
+    else:
+        print("\nLinear search: Student found with grade: {}".format(
+            search_for) + " at index: {}".format(sorted_arr_linear))
+
+    
+
+    # time_taken_milliseconds = (time.time() - start_time)*1000
+
+    # print("\n%s ms" % (str((time_taken_milliseconds))))
