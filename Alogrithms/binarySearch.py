@@ -22,29 +22,32 @@ def binary_search(arr, low, high, x):
 
 
 trial = 1
-search_for_1 = 70
-search_for_2 = 101
 
 for i in range(10):
     # Creating Objects
     arr = []
-    for i in range(0, 10):
+    for i in range(0, 500000):
         random_name_value = random.randint(0, len(student_names) - 1)
         new_object = Student(
             student_names[random_name_value], random.randint(1, 100))
         arr.append(new_object)
+        
+    
+    search_for_1 = arr[-1].grade
+    search_for_2 = 101
 
     arr.sort(key=lambda x: x.grade)
 
+
     # Ele exists
-    time_binary_exist = time.time()
+    time_binary_exist = time.time_ns()
     binary_search_exist = binary_search(arr, 0, len(arr) - 1, search_for_1)
-    time_binary_exist = (time.time() - time_binary_exist)*1000
+    time_binary_exist = (time.time_ns() - time_binary_exist)/1000000
 
     # Ele doesn't exist
-    time_binary_not_exist = time.time()
+    time_binary_not_exist = time.time_ns()
     binary_search_not_exist = binary_search(arr, 0, len(arr) - 1, search_for_2)
-    time_binary_not_exist = (time.time() - time_binary_not_exist)*1000
+    time_binary_not_exist = (time.time_ns() - time_binary_not_exist)/1000000
 
     print("\n-------------------------------------------------------")
     print(f"Trial: {trial}")
