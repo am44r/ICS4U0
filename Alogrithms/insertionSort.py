@@ -32,30 +32,30 @@ for i in range(10):
     print("Before Sorting")
 
     # Print first & last 20 objects in the arr_75000
-    # if len(arr) > 20:
-    #     print("\nFirst 20 objects:")
-    #     for i in range(20):
-    #         print(
-    #             "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
-    # else:
-    #     print("\nFirst " + str(len(arr)) + " objects: ")
-    #     for i in range(len(arr)):
-    #         print(
-    #             "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
+    if len(arr) > 20:
+        print("\nFirst 20 objects:")
+        for i in range(20):
+            print(
+                "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
+    else:
+        print("\nFirst " + str(len(arr)) + " objects: ")
+        for i in range(len(arr)):
+            print(
+                "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
 
     
     # Print last 20 objects in the arr_75000
-    # if len(arr) > 20:
-    #     print("\nLast 20 objects:")
-    #     for i in range(len(arr) - 20, len(arr)):
-    #         print(
-    #             "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
+    if len(arr) > 20:
+        print("\nLast 20 objects:")
+        for i in range(len(arr) - 20, len(arr)):
+            print(
+                "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
 
-    # else:
-    #     print("\nLast " + str(len(arr)) + " Objects:")
-    #     for i in range(len(arr)):
-    #         print(
-    #             "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
+    else:
+        print("\nLast " + str(len(arr)) + " Objects:")
+        for i in range(len(arr)):
+            print(
+                "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
 
     time_taken = time.time()
     insertionSort(arr)
@@ -64,29 +64,29 @@ for i in range(10):
     print("\n-------------------------------------------------------")
     print("After Sorting")
 
-    # if len(arr) > 20:
-    #     print("\nFirst 20 objects:")
-    #     for i in range(20):
-    #         print(
-    #             "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
-    # else:
-    #     print("\nFirst " + str(len(arr)) + " objects: ")
-    #     for i in range(len(arr)):
-    #         print(
-    #             "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
+    if len(arr) > 20:
+        print("\nFirst 20 objects:")
+        for i in range(20):
+            print(
+                "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
+    else:
+        print("\nFirst " + str(len(arr)) + " objects: ")
+        for i in range(len(arr)):
+            print(
+                "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
 
     # Print last 20 objects in the arr_75000
-    # if len(arr) > 20:
-    #     print("\nLast 20 objects:")
-    #     for i in range(len(arr) - 20, len(arr)):
-    #         print(
-    #             "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
+    if len(arr) > 20:
+        print("\nLast 20 objects:")
+        for i in range(len(arr) - 20, len(arr)):
+            print(
+                "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
 
-    # else:
-    #     print("\nLast " + str(len(arr)) + " Objects:")
-    #     for i in range(len(arr)):
-    #         print(
-    #             "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
+    else:
+        print("\nLast " + str(len(arr)) + " Objects:")
+        for i in range(len(arr)):
+            print(
+                "Name: {} - Grade: {}".format(arr[i].name, str(arr[i].grade)))
 
     print("-------------------------------------------------------\n")
     print(f"Time taken to sort: {str(time_taken)} ms")

@@ -26,7 +26,7 @@ trial = 1
 for i in range(10):
     # Creating Objects
     arr = []
-    for i in range(0, 500000):
+    for i in range(0, 75000):
         random_name_value = random.randint(0, len(student_names) - 1)
         new_object = Student(
             student_names[random_name_value], random.randint(1, 100))
